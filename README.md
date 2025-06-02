@@ -15,6 +15,8 @@
 
 ---
 
+<a name="chinese"></a>
+
 ## 📋 目录
 
 - [项目简介](#-项目简介)
@@ -27,7 +29,6 @@
 - [项目结构](#-项目结构)
 - [技术栈](#-技术栈)
 - [贡献指南](#-贡献指南)
-
 
 ---
 
@@ -336,8 +337,8 @@ icbhi-lung-sound-classification/
 │   └── Visualization and Performance Metrics.py # 评估可视化
 ├── 📋 requirements.txt                        # 依赖包列表
 └── 📖 README.md                              # 项目说明
-
 ```
+
 ---
 
 ## 🛠️ 技术栈
@@ -414,8 +415,6 @@ icbhi-lung-sound-classification/
 - 🎨 **优化**: 性能优化或代码重构
 - 🧪 **测试**: 添加或改进测试用例
 
-
-
 ## 🙏 致谢
 
 - **ICBHI 2017**: 感谢提供高质量的呼吸音数据集
@@ -439,10 +438,450 @@ icbhi-lung-sound-classification/
 
 ---
 
+<a name="english"></a>
+
+# 📋 ICBHI 2017 Lung Sound Classification Project
+
 <div align="center">
 
-**⭐ 如果这个项目对您有帮助，请给我们一个星标！⭐**
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen.svg)
 
-**🔗 [项目主页](https://github.com/zb-tju/icbhi-lung-sound-classification) | [技术博客](https://683c463d95a674fef4f6b463--gregarious-cascaron-eee6dd.netlify.app/)**
+**Deep Learning-based Multi-model Lung Disease Classification System**
+
+[English](#english) | [中文](#chinese)
+
+</div>
+
+---
+
+## 📋 Table of Contents
+
+- [Project Overview](#-project-overview)
+- [Dataset](#-dataset)
+- [System Architecture](#️-system-architecture)
+- [Model Overview](#-model-overview)
+- [Installation Guide](#-installation-guide)
+- [Usage](#-usage)
+- [Experimental Results](#-experimental-results)
+- [Project Structure](#-project-structure)
+- [Tech Stack](#️-tech-stack)
+- [Contributing](#-contributing)
+
+---
+
+## 🎯 Project Overview
+
+This project is a lung sound disease classification system based on the **ICBHI 2017 respiratory sound dataset**, implementing training, evaluation, and comparative analysis of **40 different deep learning models**. Through audio signal processing and machine learning techniques, it achieves automatic classification and diagnosis of 6 different lung diseases.
+
+### ✨ Core Features
+
+- 🔬 **Multi-model Comparison**: Implementation of 40 different deep learning model architectures
+- 🎵 **Professional Audio Processing**: High-quality feature extraction using Librosa
+- 📊 **Comprehensive Evaluation System**: Including confusion matrices, ROC curves, PR curves, and other multi-dimensional evaluations
+- 🚀 **Cutting-edge Architectures**: Including CNN, RNN, Transformer, Mamba, and other state-of-the-art models
+- 📈 **Visualization Analysis**: Complete performance comparison and visualization reports
+- ⚡ **Efficient Training**: Supporting GPU acceleration with optimized training processes
+
+---
+
+## 📊 Dataset
+
+### ICBHI 2017 Respiratory Sound Dataset
+
+- **Data Source**: International Conference on Biomedical Health Informatics (ICBHI) 2017
+- **Sample Count**: 920 audio files
+- **Sampling Rate**: 4000-44100 Hz
+- **Recording Equipment**: 7 different types of stethoscopes and microphones
+- **Patient Information**: Demographic information from 126 subjects
+
+### 🏷️ Classification Labels (6 Classes)
+
+| Class | English Name | Chinese Name | Description |
+|-------|--------------|--------------|-------------|
+| 0 | Healthy | 健康 | Normal breathing sounds |
+| 1 | COPD | 慢性阻塞性肺病 | Chronic airway obstruction disease |
+| 2 | Pneumonia | 肺炎 | Lung infectious disease |
+| 3 | URTI | 上呼吸道感染 | Upper respiratory tract inflammation |
+| 4 | Bronchiectasis | 支气管扩张 | Abnormal bronchial dilation |
+| 5 | Bronchiolitis | 细支气管炎 | Bronchiolar inflammation |
+
+---
+
+## 🏗️ System Architecture
+
+```mermaid
+graph TB
+    A[Raw Audio Data] --> B[Data Preprocessing]
+    B --> C[Feature Extraction]
+    C --> D[Data Augmentation SMOTE]
+    D --> E[Model Training]
+    E --> F[Model Evaluation]
+    F --> G[Performance Comparison]
+    G --> H[Visualization Report]
+    
+    C --> C1[MFCC 24-dim]
+    C --> C2[Chroma 24-dim]
+    C --> C3[Mel Spectrogram 128-dim]
+    C --> C4[Spectral Contrast 7-dim]
+    C --> C5[Tonnetz 6-dim]
+    
+    E --> E1[CNN Series]
+    E --> E2[RNN Series]
+    E --> E3[Transformer Series]
+    E --> E4[Mamba Series]
+    E --> E5[Hybrid Architectures]
+```
+
+### 🎵 Feature Engineering
+
+- **Total Feature Dimensions**: 189-dimensional
+- **MFCC**: 24-dim - Mel-frequency cepstral coefficients
+- **Chroma**: 24-dim - Pitch class feature representation
+- **Mel Spectrogram**: 128-dim - Perceptually weighted spectral features
+- **Spectral Contrast**: 7-dim - Peak-valley differences in spectrum
+- **Tonnetz**: 6-dim - Tonal network features
+
+---
+
+## 🧠 Model Overview
+
+This project implements 40 different deep learning model architectures, covering various methods from basic to state-of-the-art:
+
+### 🔵 Traditional Deep Learning Models
+
+#### CNN Series
+- **Basic CNN** (`basic_cnn`): Basic convolutional neural network
+- **Deep CNN** (`deep_cnn`): Multi-layer convolutional structure
+- **Batch Norm CNN** (`batch_norm_cnn`): CNN with batch normalization layers
+- **Residual CNN** (`residual_cnn`): ResNet-style residual connections
+- **Multiscale CNN** (`multiscale`): Parallel multiple convolution kernel sizes
+- **Separable CNN** (`separable_cnn`): Using depthwise separable convolutions
+- **Dilated CNN** (`dilated_cnn`): Using dilated convolutions for larger receptive fields
+- **Dense CNN** (`dense_cnn`): Densely connected convolutional network
+- **Pyramid CNN** (`pyramid_cnn`): Pyramid-structured CNN
+
+#### RNN Series
+- **LSTM** (`lstm`): Long Short-Term Memory network
+- **Bidirectional LSTM** (`bilstm`): Bidirectional Long Short-Term Memory
+- **GRU** (`gru`): Gated Recurrent Unit
+- **Stacked LSTM** (`stacked_lstm`): Multi-layer LSTM structure
+
+#### Hybrid Architectures
+- **CNN+LSTM** (`cnn_lstm`): Combination of convolution and recurrence
+- **CNN+GRU** (`cnn_gru`): Combination of convolution and GRU
+- **Attention LSTM** (`attention_lstm`): LSTM with attention mechanism
+
+### 🟢 Modern Architecture Models
+
+#### Transformer Series
+- **Basic Transformer** (`transformer_like`): Multi-head self-attention mechanism
+- **BERT-style** (`bert_like`): Bidirectional encoder representations
+- **GPT-style** (`gpt_like`): Generative pre-training architecture
+- **Vision Transformer** (`vit_like`): ViT applied to 1D signals
+- **Hierarchical Transformer** (`hierarchical_transformer`): Multi-level feature extraction
+
+#### Attention Mechanisms
+- **Self-Attention** (`self_attention`): Pure self-attention architecture
+- **Cross-Attention** (`cross_attention`): Multi-branch cross-attention
+- **Linear Attention** (`linear_attention`): Complexity-reduced linear attention
+- **Sparse Attention** (`sparse_attention`): Local sparse attention patterns
+
+### 🟡 Cutting-edge Innovation Models
+
+#### Mamba Series (State Space Models)
+- **Pure Mamba** (`pure_mamba`): Selective state space-based model
+- **Mamba-Transformer** (`mamba_transformer`): Fusion of Mamba and Transformer
+- **Mamba Inspired** (`mamba_inspired`): Simplified selective gating mechanism
+- **Hybrid Mamba** (`hybrid_mamba`): Multi-branch Mamba architecture
+
+#### Special Optimization Models
+- **Wide Deep CNN** (`wide_deep_cnn`): Parallel wide and deep components
+- **Locally Connected** (`locally_connected`): Locally connected network
+- **Global Max Pool** (`global_max_pool`): Using global max pooling
+- **Average Pool** (`avg_pool`): Using average pooling strategy
+- **Regularized Models**: L1/L2 regularization optimization (`l1_regularized`, `l2_regularized`)
+- **Activation Function Optimization**: ELU, Swish and other new activation functions (`elu_cnn`, `swish_cnn`)
+- **Mega Model** (`mega_lstm`): Extremely large deep network with massive parameters
+
+---
+
+## 🚀 Installation Guide
+
+### Requirements
+
+- Python 3.8+
+- CUDA 11.0+ (optional, for GPU acceleration)
+- 8GB+ RAM
+- 2GB+ available disk space
+
+### Quick Installation
+
+```bash
+# 1. Clone the project
+git clone https://gitclone.com/github.com/zb-tju/icbhi-lung-sound-classification.git
+cd icbhi-lung-sound-classification
+
+# 2. Create virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+# or
+venv\Scripts\activate  # Windows
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Verify installation
+python -c "import tensorflow as tf; print('TensorFlow Version:', tf.__version__)"
+```
+
+### GPU Support (Optional)
+
+```bash
+# Install CUDA-supported TensorFlow
+pip install tensorflow-gpu==2.12.0
+```
+
+---
+
+## 📖 Usage
+
+### 1️⃣ Data Preparation
+
+```bash
+# Create data directory
+mkdir -p Data/ICBHI_final_database
+
+# Place ICBHI 2017 dataset in the following directory structure:
+Data/
+├── ICBHI_final_database/     # Audio files (.wav)
+├── patient_diagnosis.csv     # Patient diagnosis information
+└── demographic_info.txt      # Demographic information
+```
+
+### 2️⃣ Data Preprocessing and Feature Extraction
+
+```bash
+# Data preprocessing
+python Data_Preparation_and_Preprocessing.py
+
+# Feature extraction (time-consuming, GPU recommended)
+python "Feature Extraction.py"
+```
+
+### 3️⃣ Model Training
+
+```bash
+# Train all 40 models (time-consuming, batch training recommended)
+python Model.py
+
+# Or train specific models (modify model_names list in Model.py)
+```
+
+### 4️⃣ Evaluation and Visualization
+
+```bash
+# Evaluate all models and generate reports
+python "Visualization and Performance Metrics.py"
+```
+
+### 📊 Custom Training
+
+```python
+# Example: Train only specific models
+model_names = ['basic_cnn', 'transformer_like', 'pure_mamba']
+
+# Modify training parameters
+epochs = 125  # Default training epochs
+batch_size = 32  # Default batch size
+```
+
+---
+
+## 📈 Experimental Results
+
+### 🏆 Model Performance Leaderboard (Top 10)
+
+Based on actual test results, here are the top 10 performing models:
+
+| Rank | Model Name | Accuracy | F1 Score | AUC | Cohen's κ | Inference Time(ms/sample) |
+|------|------------|----------|----------|-----|-----------|---------------------------|
+| 🥇 | **Dense CNN** | **97.5%** | **0.9573** | **0.9994** | **0.9675** | **0.808** |
+| 🥈 | **Residual CNN** | **96.0%** | **0.9601** | **0.9975** | **0.9478** | **1.205** |
+| 🥉 | **Pyramid CNN** | **95.5%** | **0.9553** | **0.9979** | **0.9417** | **1.062** |
+| 4 | Basic CNN | 94.0% | 0.9416 | 0.9975 | 0.9223 | 2.333 |
+| 5 | Global Max Pool | 94.0% | 0.9401 | 0.9958 | 0.9218 | 0.545 |
+| 6 | Locally Connected | 94.0% | 0.9405 | 0.9996 | 0.9221 | 0.394 |
+| 7 | ViT-like | 93.5% | 0.9369 | 0.9978 | 0.9159 | 0.401 |
+| 8 | Dilated CNN | 93.5% | 0.9358 | 0.9980 | 0.9155 | 1.051 |
+| 9 | Deep CNN | 92.5% | 0.9256 | 0.9968 | 0.9027 | 2.211 |
+| 10 | CNN-LSTM | 91.5% | 0.9142 | 0.9927 | 0.8887 | 3.430 |
+
+### 📊 Key Performance Metrics
+
+- **Highest Accuracy**: 97.5% (Dense CNN)
+- **Fastest Inference**: 0.394ms/sample (Locally Connected)
+- **Best AUC**: 0.9996 (Locally Connected)
+- **Best F1 Score**: 0.9573 (Dense CNN)
+- **Best Overall Performance**: Dense CNN (excellent performance in accuracy, F1 score, and AUC)
+
+### 🎯 Model Characteristics Analysis
+
+#### 🏆 Top Performers
+- **Dense CNN**: Achieved highest accuracy and F1 score with the help of dense connections
+- **Residual CNN**: Residual connections effectively improved model performance, second only to Dense CNN
+- **Pyramid CNN**: Pyramid structure excelled in feature extraction
+
+#### ⚡ Efficiency Leaders
+- **Locally Connected**: Achieved fastest inference speed while maintaining high accuracy
+- **Global Max Pool**: Simple and effective pooling strategy with fast inference
+- **ViT-like**: Successful application of Transformer architecture on 1D audio
+
+#### 🔬 Technical Breakthroughs
+- **Success of Modern Architectures**: ViT-like model demonstrated Transformer's potential in audio classification
+- **Advantages of Traditional Architectures**: CNN series models remain the backbone of audio classification
+- **Balance of Efficiency and Accuracy**: Multiple models found good balance between high accuracy and fast inference
+
+---
+
+## 📁 Project Structure
+
+```
+icbhi-lung-sound-classification/
+├── 📊 Data/                                    # Data directory
+│   ├── ICBHI_final_database/                  # Original audio files
+│   ├── wavfiles_cleaned/                      # Cleaned audio files
+│   ├── patient_diagnosis.csv                  # Patient diagnosis
+│   ├── demographic_info.txt                   # Demographics
+│   └── data.pkl                              # Extracted feature data
+├── 🧠 Model/                                   # Trained models
+│   ├── basic_cnn.keras
+│   ├── dense_cnn.keras
+│   ├── residual_cnn.keras
+│   ├── pyramid_cnn.keras
+│   ├── vit_like.keras
+│   └── ... (40 model files)
+├── 📈 Evaluation_Results/                      # Evaluation results (auto-generated by Visualization script)
+│   ├── ROC_Curves/                           # ROC curve plots
+│   ├── Confusion_Matrices/                   # Confusion matrices
+│   ├── PR_Curves/                            # PR curves
+│   ├── Performance_Comparison/               # Performance comparison plots
+│   ├── model_evaluation_results.csv         # Detailed evaluation metrics
+│   └── evaluation_summary.txt               # Evaluation summary
+├── 🔧 Scripts/                                # Main scripts
+│   ├── Data_Preparation_and_Preprocessing.py # Data preprocessing
+│   ├── Feature Extraction.py                # Feature extraction
+│   ├── Model.py                              # Model definition and training
+│   └── Visualization and Performance Metrics.py # Evaluation visualization
+├── 📋 requirements.txt                        # Dependency list
+└── 📖 README.md                              # Project documentation
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### Core Frameworks
+- **TensorFlow 2.12+**: Deep learning framework
+- **Keras**: High-level neural network API
+- **Librosa 0.10+**: Audio signal processing
+- **Scikit-learn 1.3+**: Machine learning tools
+
+### Data Processing
+- **NumPy**: Numerical computing
+- **Pandas**: Data manipulation
+- **Imbalanced-learn**: Imbalanced data handling
+- **SciPy**: Scientific computing
+
+### Visualization
+- **Matplotlib**: Basic plotting
+- **Seaborn**: Statistical visualization
+
+### Utility Libraries
+- **tqdm**: Progress bars
+- **pickle**: Data serialization
+- **glob**: File path matching
+
+---
+
+## 🔬 Technical Innovation
+
+### 1. Comprehensive Multi-Architecture Comparison
+- First systematic comparison of 40 different architectures in lung sound classification tasks
+- Complete technical spectrum from traditional CNN to latest Mamba architectures
+- Comprehensive benchmark testing for medical audio AI
+
+### 2. Feature Engineering Optimization
+- 189-dimensional comprehensive audio feature extraction
+- Audio envelope detection denoising techniques
+- SMOTE data augmentation to solve class imbalance problems
+
+### 3. Practical-Oriented Design
+- Emphasis on inference speed for clinical application reference
+- Comprehensive evaluation metric system
+- Reproducible experimental setup and detailed documentation
+
+---
+
+## 🚀 Future Plans
+
+- [ ] **Real-time Analysis System**: Develop web interface and mobile applications
+- [ ] **Model Ensemble**: Research multi-model ensemble methods
+- [ ] **Model Compression**: Develop lightweight models for edge devices
+- [ ] **Multi-language Support**: Support multi-language interfaces and documentation
+- [ ] **Clinical Validation**: Collaborate with medical institutions for clinical testing
+
+---
+
+## 🤝 Contributing
+
+We welcome all forms of contributions!
+
+### How to Contribute
+
+1. **Fork** this project
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open **Pull Request**
+
+### Contribution Types
+
+- 🐛 **Bug Fixes**: Report or fix issues
+- ✨ **New Features**: Add new models or functionality
+- 📝 **Documentation**: Improve documentation and comments
+- 🎨 **Optimization**: Performance optimization or code refactoring
+- 🧪 **Testing**: Add or improve test cases
+
+## 🙏 Acknowledgments
+
+- **ICBHI 2017**: Thanks for providing high-quality respiratory sound dataset
+- **Open Source Community**: Thanks to all contributors and maintainers
+
+---
+
+## 📞 Contact
+
+- 📧 Email: z1745743921@tju.edu.cn
+- 🐛 Report Issues: [GitHub Issues](https://github.com/zb-tju/icbhi-lung-sound-classification/issues)
+
+---
+
+## 📊 Project Statistics
+
+![GitHub stars](https://img.shields.io/github/stars/zb-tju/icbhi-lung-sound-classification)
+![GitHub forks](https://img.shields.io/github/forks/zb-tju/icbhi-lung-sound-classification)
+![GitHub issues](https://img.shields.io/github/issues/zb-tju/icbhi-lung-sound-classification)
+![GitHub license](https://img.shields.io/github/license/zb-tju/icbhi-lung-sound-classification)
+
+---
+
+<div align="center">
+
+**⭐ If this project helps you, please give us a star! ⭐**
+
+**🔗 [Project Homepage](https://github.com/zb-tju/icbhi-lung-sound-classification) | [Tech Blog](https://683c463d95a674fef4f6b463--gregarious-cascaron-eee6dd.netlify.app/)**
 
 </div>
