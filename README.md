@@ -180,7 +180,7 @@ graph TB
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/zb-tju/icbhi-lung-sound-classification.git
+git clone https://gitclone.com/github.com/zb-tju/icbhi-lung-sound-classification.git
 cd icbhi-lung-sound-classification
 
 # 2. 创建虚拟环境（推荐）
@@ -425,18 +425,18 @@ icbhi-lung-sound-classification/
 
 ## 📞 联系方式
 
-- 📧 Email: your.email@example.com
-- 💬 讨论: [GitHub Discussions](https://github.com/yourusername/icbhi-lung-sound-classification/discussions)
-- 🐛 报告问题: [GitHub Issues](https://github.com/yourusername/icbhi-lung-sound-classification/issues)
+- 📧 Email: z1745743921@tju.edu.cn
+- 💬 讨论: [GitHub Discussions](https://github.com/zb-tju/icbhi-lung-sound-classification/discussions)
+- 🐛 报告问题: [GitHub Issues](https://github.com/zb-tju/icbhi-lung-sound-classification/issues)
 
 ---
 
 ## 📊 项目统计
 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/icbhi-lung-sound-classification)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/icbhi-lung-sound-classification)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/icbhi-lung-sound-classification)
-![GitHub license](https://img.shields.io/github/license/yourusername/icbhi-lung-sound-classification)
+![GitHub stars](https://img.shields.io/github/stars/zb-tju/icbhi-lung-sound-classification)
+![GitHub forks](https://img.shields.io/github/forks/zb-tju/icbhi-lung-sound-classification)
+![GitHub issues](https://img.shields.io/github/issues/zb-tju/icbhi-lung-sound-classification)
+![GitHub license](https://img.shields.io/github/license/zb-tju/icbhi-lung-sound-classification)
 
 ---
 
