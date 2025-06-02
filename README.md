@@ -1,4 +1,4 @@
-# 🫁 ICBHI 2017 肺音分类项目
+# 📋 ICBHI 2017 肺音分类项目
 
 <div align="center">
 
@@ -444,6 +444,6 @@ icbhi-lung-sound-classification/
 
 **⭐ 如果这个项目对您有帮助，请给我们一个星标！⭐**
 
-**🔗 [项目主页](https://github.com/zb-tju/icbhi-lung-sound-classification) | [技术博客]([https://your-blog-link.com](https://683c463d95a674fef4f6b463--gregarious-cascaron-eee6dd.netlify.app/))**
+**🔗 [项目主页](https://github.com/zb-tju/icbhi-lung-sound-classification) | [技术博客](https://683c463d95a674fef4f6b463--gregarious-cascaron-eee6dd.netlify.app/)**
 
 </div>
