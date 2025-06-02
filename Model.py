@@ -1229,16 +1229,16 @@ models = [
     Model17_DilatedCNN(), Model18_LocallyConnected(), Model19_ELU_CNN(), Model20_Swish_CNN(),
     Model21_L1Regularized(), Model22_L2Regularized(), Model23_DoubleConv(), Model24_GlobalMaxPool(),
     Model25_AvgPool(), Model26_MambaInspired(), Model27_TransformerLike(), 
-    Model28_PureMamba_Fixed(),  # 修复后的模型
+    Model28_PureMamba_Fixed(),  
     Model29_MambaTransformer(), 
-    Model30_ViTLike_Fixed(),  # 修复后的模型
+    Model30_ViTLike_Fixed(), 
     Model31_BertLike(), Model32_GPTLike(),
-    Model33_LinearAttention_Fixed(),  # 修复后的模型
+    Model33_LinearAttention_Fixed(), 
     Model34_SparseAttention(), 
-    Model35_CrossAttention_Fixed(),  # 修复后的模型
+    Model35_CrossAttention_Fixed(),  
     Model36_SelfAttention(),
     Model37_HierarchicalTransformer(), Model38_ConvTransformer(), Model39_MegaLSTM(), 
-    Model40_HybridMamba_Fixed()  # 修复后的模型
+    Model40_HybridMamba_Fixed() 
 ]
 
 # 训练并保存所有模型
