@@ -180,7 +180,7 @@ graph TB
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/yourusername/icbhi-lung-sound-classification.git
+git clone https://github.com/zb-tju/icbhi-lung-sound-classification.git
 cd icbhi-lung-sound-classification
 
 # 2. 创建虚拟环境（推荐）
@@ -322,7 +322,7 @@ icbhi-lung-sound-classification/
 │   ├── pyramid_cnn.keras
 │   ├── vit_like.keras
 │   └── ... (40个模型文件)
-├── 📈 Evaluation_Results/                      # 评估结果
+├── 📈 Evaluation_Results/                      # 评估结果 运行Visualization and Performance Metrics.py会自动生成
 │   ├── ROC_Curves/                           # ROC曲线图
 │   ├── Confusion_Matrices/                   # 混淆矩阵
 │   ├── PR_Curves/                            # PR曲线
@@ -335,10 +335,9 @@ icbhi-lung-sound-classification/
 │   ├── Model.py                              # 模型定义与训练
 │   └── Visualization and Performance Metrics.py # 评估可视化
 ├── 📋 requirements.txt                        # 依赖包列表
-├── 📖 README.md                              # 项目说明
-└── 📄 LICENSE                                # 开源许可证
-```
+└── 📖 README.md                              # 项目说明
 
+```
 ---
 
 ## 🛠️ 技术栈
@@ -415,24 +414,11 @@ icbhi-lung-sound-classification/
 - 🎨 **优化**: 性能优化或代码重构
 - 🧪 **测试**: 添加或改进测试用例
 
----
 
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
-
----
-
-## 👨‍💻 作者
-
-**您的姓名** - [@yourusername](https://github.com/yourusername)
-
----
 
 ## 🙏 致谢
 
 - **ICBHI 2017**: 感谢提供高质量的呼吸音数据集
-- **TensorFlow团队**: 提供强大的深度学习框架
 - **开源社区**: 感谢所有贡献者和维护者
 
 ---
