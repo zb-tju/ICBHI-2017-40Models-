@@ -426,7 +426,6 @@ icbhi-lung-sound-classification/
 ## 📞 联系方式
 
 - 📧 Email: z1745743921@tju.edu.cn
-- 💬 讨论: [GitHub Discussions](https://github.com/zb-tju/icbhi-lung-sound-classification/discussions)
 - 🐛 报告问题: [GitHub Issues](https://github.com/zb-tju/icbhi-lung-sound-classification/issues)
 
 ---
