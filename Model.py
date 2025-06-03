@@ -59,8 +59,6 @@ set_seeds(42)
 # 设置使用GPU 0（可以修改为0,1,2,3中的任意一个）
 setup_gpu(gpu_id=2)
 
-# =================== 自定义层定义 ===================
-# 为了解决Lambda层创建变量的问题，定义自定义层
 
 class MambaBlock(Layer):
     """Mamba块的自定义实现"""
@@ -173,9 +171,7 @@ X_test_reshaped = np.reshape(X_test, (X_test.shape[0], 189, 1))
 
 input_shape = (189, 1)
 
-# =================== 修复后的模型定义 ===================
 
-# 保持原有的正常工作的模型不变（Model1-Model27, 除了需要修复的）
 class Model1_BasicCNN:
     """基础CNN模型"""
     def __init__(self, input_shape=(189, 1)):
@@ -775,7 +771,7 @@ class Model27_TransformerLike:
         model = Model(inputs, outputs)
         return model
 
-# =================== 修复的模型 ===================
+
 
 class Model28_PureMamba_Fixed:
     """修复后的纯Mamba状态空间模型"""
