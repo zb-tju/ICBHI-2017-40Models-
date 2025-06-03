@@ -24,9 +24,8 @@ warnings.filterwarnings('ignore')
 plt.rcParams['font.sans-serif'] = ['Noto Sans CJK JP']
 plt.rcParams['axes.unicode_minus'] = False
 
-# =================== 定义自定义层（与训练代码保持一致）===================
+
 class MambaBlock(Layer):
-    """Mamba块的自定义实现"""
     def __init__(self, d_model=128, **kwargs):
         super(MambaBlock, self).__init__(**kwargs)
         self.d_model = d_model
