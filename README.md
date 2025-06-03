@@ -1,19 +1,3 @@
-# 📋 ICBHI 2017 肺音分类项目
-
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen.svg)
-
-**基于深度学习的多模型肺音疾病分类系统**
-
-[English](#english) | [中文](#chinese)
-
-
-<a name="english"></a>
-
 # 📋 ICBHI 2017 Lung Sound Classification Project
 
 <div align="center">
@@ -30,6 +14,8 @@
 </div>
 
 ---
+
+<a name="english"></a>
 
 ## 📋 Table of Contents
 
@@ -452,20 +438,24 @@ We welcome all forms of contributions!
 
 ---
 
+<a name="chinese"></a>
+
+# 📋 ICBHI 2017 肺音分类项目
+
 <div align="center">
 
-**⭐ If this project helps you, please give us a star! ⭐**
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen.svg)
 
-**🔗 [Project Homepage](https://github.com/zb-tju/icbhi-lung-sound-classification) | [Tech Blog](https://683c463d95a674fef4f6b463--gregarious-cascaron-eee6dd.netlify.app/)**
+**基于深度学习的多模型肺音疾病分类系统**
 
-</div>
-
+[English](#english) | [中文](#chinese)
 
 </div>
 
 ---
-
-<a name="chinese"></a>
 
 ## 📋 目录
 
@@ -887,3 +877,11 @@ icbhi-lung-sound-classification/
 ![GitHub license](https://img.shields.io/github/license/zb-tju/icbhi-lung-sound-classification)
 
 ---
+
+<div align="center">
+
+**⭐ If this project helps you, please give us a star! ⭐**
+
+**🔗 [Project Homepage](https://github.com/zb-tju/icbhi-lung-sound-classification) | [Tech Blog](https://683c463d95a674fef4f6b463--gregarious-cascaron-eee6dd.netlify.app/)**
+
+</div>
